@@ -1,11 +1,9 @@
 import os
 import sys
 from agent import LlmAgent
-# from dotenv import load_dotenv # Uncomment if using .env file
 
 def main():
     # Load API Key (Ensure GOOGLE_API_KEY is set in your environment)
-    # load_dotenv() 
     api_key = os.getenv("GOOGLE_API_KEY")
     if not api_key:
         print("Error: GOOGLE_API_KEY not found in environment variables.")
@@ -32,9 +30,6 @@ def main():
             response = agent.send_message(user_input)
             print(f"Referee: {response}\n")
 
-            # Check if game is over (We interpret the agent's narration or check internal state)
-            # In a true ADK pattern, the agent would return a structured stop signal.
-            # For this CLI, we rely on the logic that 3 rounds = end.
             from tools import active_engine
             if active_engine.game_over:
                 print("--- GAME OVER ---")

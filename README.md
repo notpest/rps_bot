@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors-Plus (RPS+) Referee
+# Rock-Paper-Scissors (RPS) Referee
 
 A minimal, ADK-compliant AI Game Referee built with Python and the **Google Gen AI SDK**.
 
